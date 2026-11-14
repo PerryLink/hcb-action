@@ -1,0 +1,22 @@
+name: HCB check
+description: Check a DSH plugin against the canonical HCB matrix
+inputs:
+  package:
+    description: npm package name
+    required: true
+  host:
+    description: DSH host version, or "latest"
+    required: false
+    default: latest
+  fail-on:
+    description: declared-compatible | declared-incompatible | never
+    required: false
+    default: declared-incompatible
+runs:
+  using: composite
+  steps:
+    - uses: PerryLink/dsh-compat-baseline/.github/actions/check@main
+      with:
+        package: ${{ inputs.package }}
+        host: ${{ inputs.host }}
+        fail-on: ${{ inputs.fail-on }}
