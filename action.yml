@@ -15,7 +15,7 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: PerryLink/dsh-compat-baseline/.github/actions/check@main
+    - uses: PerryLink/hcb/.github/actions/check@main
       with:
         package: ${{ inputs.package }}
         host: ${{ inputs.host }}
