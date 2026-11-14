@@ -10,4 +10,4 @@
     # fail-on: declared-incompatible
 ```
 
-It delegates to `PerryLink/dsh-compat-baseline/.github/actions/check@main`; the canonical data lives there.
+It delegates to `PerryLink/hcb/.github/actions/check@main`; the canonical data lives there.
